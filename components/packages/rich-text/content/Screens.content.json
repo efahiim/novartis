@@ -1,0 +1,162 @@
+{
+  "data": {
+    "screenCollection": {
+      "items": [
+        {
+          "name": "Get the facts - main - real relief",
+          "title": "REAL RELIEF WITH COSENTYX®",
+          "slug": "real-relief",
+          "content": {
+            "json": {
+              "nodeType": "document",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "embedded-asset-block",
+                  "data": {
+                    "target": {
+                      "sys": {
+                        "id": "3VR1nXNbvh1cyWaDObYTGz",
+                        "type": "Link",
+                        "linkType": "Asset"
+                      }
+                    }
+                  },
+                  "content": []
+                },
+                {
+                  "nodeType": "hr",
+                  "data": {},
+                  "content": []
+                },
+                {
+                  "nodeType": "paragraph",
+                  "data": {},
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "Chronic, inflammatory, systemic … not sure what it all means? ",
+                      "marks": [],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "text",
+                      "value": "Swipe right",
+                      "marks": [
+                        {
+                          "type": "italic"
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "text",
+                      "value": " to find out. Could your plaque psoriasis be connected to psoriatic arthritis? ",
+                      "marks": [],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "text",
+                      "value": "Swipe left",
+                      "marks": [
+                        {
+                          "type": "italic"
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "text",
+                      "value": " to find out.",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "nodeType": "paragraph",
+                  "data": {},
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "",
+                      "marks": [],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "embedded-entry-inline",
+                      "data": {
+                        "target": {
+                          "sys": {
+                            "id": "1SEty3EL4NO5gvvlVsYEHT",
+                            "type": "Link",
+                            "linkType": "Entry"
+                          }
+                        }
+                      },
+                      "content": []
+                    },
+                    {
+                      "nodeType": "text",
+                      "value": "",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "nodeType": "paragraph",
+                  "data": {},
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "",
+                      "marks": [],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "embedded-entry-inline",
+                      "data": {
+                        "target": {
+                          "sys": {
+                            "id": "4ZfgMsKY85Wre4JpOBy299",
+                            "type": "Link",
+                            "linkType": "Entry"
+                          }
+                        }
+                      },
+                      "content": []
+                    },
+                    {
+                      "nodeType": "text",
+                      "value": "",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            "links": {
+              "assets": {
+                "block": [
+                  {
+                    "sys": {
+                      "id": "3VR1nXNbvh1cyWaDObYTGz"
+                    },
+                    "url": "https://images.ctfassets.net/vw8nhchr557z/3VR1nXNbvh1cyWaDObYTGz/a868c077b6b2e3b1481e9de8f8cf8d65/real-relief.png",
+                    "title": "Real Relief",
+                    "width": 367,
+                    "height": 242,
+                    "description": "real relief with cosentyx® image",
+                    "contentType": "image/png"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

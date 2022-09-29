@@ -1,0 +1,77 @@
+name: PSA Non prod
+
+trigger: none
+
+parameters:
+  - name: slotname
+    displayName: Slot
+    type: string
+    default: Dev
+    values:
+      - Dev
+      - QA
+      - UAT
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+- stage: Build
+  jobs:
+  - job: build
+    displayName: Build Next App
+    steps:
+    - task: Npm@1
+      displayName: Install Dependencies for components
+      inputs:
+        command: 'install'
+        workingDir: 'components'
+    - task: Npm@1
+      displayName: Install Dependencies for Apps
+      inputs:
+        command: 'install'
+        workingDir: 'apps/psa'
+    - task: CmdLine@2
+      displayName: 'npm run export'
+      inputs:
+        script: 'npm run export'
+        workingDirectory: 'apps/psa'
+    - task: ArchiveFiles@2
+      displayName: 'Archive psa/out'
+      inputs:
+        rootFolderOrFile: 'apps/psa/out'
+        includeRootFolder: false
+        archiveFile: '$(Build.ArtifactStagingDirectory)/build_$(Build.BuildId).zip'
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifact: drop'
+
+- stage: Deploy
+  displayName: ${{ parameters.slotname }}
+  jobs:
+  - deployment: deploy
+    displayName: Deploy on ${{ parameters.slotname }}
+    environment:
+      name: ${{ parameters.slotname }}
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: DownloadBuildArtifacts@1
+            displayName: Download artifacts
+            inputs:
+              buildType: current
+              downloadType: single
+              artifactName: drop
+              downloadPath: $(System.ArtifactsDirectory)
+            enabled: false
+
+          - task: AzureRmWebAppDeployment@4
+            inputs:
+              ConnectionType: 'AzureRM'
+              azureSubscription: 'TAR-MUE1-RG01-PROD-NOV-WEB'
+              appType: 'webApp'
+              WebAppName: 'NOV-PSA-AS-NONPROD'
+              deployToSlotOrASE: true
+              ResourceGroupName: 'TAR-MUE1-RG01-NONPROD-NOV-WEB'
+              SlotName: ${{ parameters.slotname }}
+              packageForLinux: '$(System.DefaultWorkingDirectory)/../**/*.zip'

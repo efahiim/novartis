@@ -1,0 +1,5 @@
+fragment ColorTextFragment on ColorText {
+  label
+  type
+  color
+}

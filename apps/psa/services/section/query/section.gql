@@ -1,0 +1,17 @@
+query GetSection($slug: String!) {
+  experienceCollection(limit: 1, where: {slug: $slug}) {
+    items {
+      sectionPickerCollection(limit: 4) {
+        items {
+          name
+          slug
+          leftGroupName
+          rightGroupName
+          ...LeftScreensFragment
+          ...MiddleScreensFragment
+          ...RightScreensFragment
+        }
+      }
+    }
+  }
+}

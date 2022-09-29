@@ -1,0 +1,10 @@
+fragment CtaContainerFragment on CtaContainer {
+  title
+  itemsCollection {
+    items {
+      label
+      url
+    }
+  }
+  display
+}

@@ -1,0 +1,12 @@
+query {
+  indicationCollection(limit: 1, where: { name: "PSO" }) {
+    items {
+      experiencePickerCollection {
+        items {
+          title
+          slug
+        }
+      }
+    }
+  }
+}

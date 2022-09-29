@@ -1,0 +1,12 @@
+fragment VideoFragment on Video {
+  name
+  url
+  thumbnail {
+    title
+    description
+    url
+    width
+    height
+  }
+  autoplay
+}

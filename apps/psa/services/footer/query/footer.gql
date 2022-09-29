@@ -1,0 +1,42 @@
+query {
+  footerCollection(limit: 1) {
+    items {
+      isiTitle
+      isiTopText {
+        json
+      }
+      isiBottomText {
+        json
+      }
+      indicationsTitle
+      indication {
+        json
+      }
+      menuLinksCollection(limit: 4) {
+        items {
+          itemsCollection {
+            items {
+              label
+              url
+            }
+          }
+        }
+      }
+      socialLinksCollection(limit: 4) {
+        items {
+          label
+          url
+        }
+      }
+      disclaimer {
+        json
+      }
+      termsConditions {
+        json
+      }
+      footerLogoMedia {
+        url
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "data": {
+    "headerCollection": {
+      "items": [
+        {
+          "body": {
+            "json": {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "[For people 6+ with moderate to severe plaque psoriasis.],For US Residents",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                }
+              ],
+              "nodeType": "document"
+            }
+          },
+          "menuPickerCollection": {
+            "items": [
+              {
+                "name": "CTA test 1",
+                "title": "CTA test 1",
+                "label": "FDA Prescribing Information",
+                "url": "https://www.novartis.us/sites/www.novartis.us/files/cosentyx.pdf"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

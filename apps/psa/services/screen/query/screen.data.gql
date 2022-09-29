@@ -1,0 +1,57 @@
+query GetScreenLinks($slug: String!) {
+  screenCollection(limit: 1, where: {slug_exists: true, slug: $slug}) {
+    items {
+      name
+      title
+      slug
+      leftContent {
+        links {
+          assets {
+            block {
+              title
+              description
+              url
+              width
+              height
+              sys {
+                id
+              }
+            }
+          }
+          entries {
+            block {
+              ...BlockFragment
+            }
+            inline {
+              ...InlineFragment
+            }
+          }
+        }
+      }
+      rightContent {
+        links {
+          assets {
+            block {
+              title
+              description
+              url
+              width
+              height
+              sys {
+                id
+              }
+            }
+          }
+          entries {
+            block {
+              ...BlockFragment
+            }
+            inline {
+              ...InlineFragment
+            }
+          }
+        }
+      }
+    }
+  }
+}

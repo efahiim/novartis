@@ -1,0 +1,30 @@
+query {
+  headerCollection(limit: 1) {
+    items {
+      logo {
+        title
+        description
+        url
+        width
+        height
+      }
+      primaryText {
+        json
+      }
+      secondaryText {
+        json
+      }
+      menuCollection {
+        items {
+          title
+          itemsCollection {
+            items {
+              label
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+}

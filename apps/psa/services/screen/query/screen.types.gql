@@ -1,0 +1,57 @@
+query GetScreenJson($slug: String!) {
+    screenCollection(limit: 1, where: { slug_exists: true, slug: $slug }) {
+        items {
+            name
+            title
+            slug
+            leftContent {
+                links {
+                    assets {
+                        block {
+                            sys {
+                                id
+                            }
+                            title
+                            description
+                            url
+                            width
+                            height
+                        }
+                    }
+                    entries {
+                      block {
+                        __typename
+                      }
+                      inline {
+                        __typename
+                      }
+                    }
+                }
+            }
+            rightContent {
+                links {
+                    assets {
+                        block {
+                            sys {
+                                id
+                            }
+                            title
+                            description
+                            url
+                            width
+                            height
+                        }
+                    }
+                    entries {
+                      block {
+                        __typename
+                      }
+                      inline {
+                        __typename
+                      }
+                    }
+                }
+            }
+        }
+    }
+}

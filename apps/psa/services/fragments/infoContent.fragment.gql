@@ -1,0 +1,25 @@
+fragment InfoContentFragment on InfoContent {
+  infoContentText: text {
+    json
+    links {
+      entries {
+        inline {
+          __typename
+          sys {
+            id
+          }
+          ... on ColorText {
+            label
+            type
+            color
+          }
+        }
+      }
+    }
+  }
+  image {
+    url
+    title
+    description
+  }
+}

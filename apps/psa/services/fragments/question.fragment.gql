@@ -1,0 +1,11 @@
+fragment QuestionFragment on Question {
+  questionText: text
+  answerPickerCollection {
+    items {
+      answerText: text
+      description
+      value
+    }
+  }
+  display
+}

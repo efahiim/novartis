@@ -1,0 +1,14 @@
+fragment RightScreensFragment on Section {
+  rightScreenPickerCollection(limit: 10) {
+    items {
+      title
+      slug
+      leftContent {
+        json
+      }
+      rightContent {
+        json
+      }
+    }
+  }
+}

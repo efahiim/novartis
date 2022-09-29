@@ -1,0 +1,12 @@
+fragment MiddleScreensFragment on Section {
+  middleScreenPicker {
+    title
+    slug
+    leftContent {
+      json
+    }
+    rightContent {
+      json
+    }
+  }
+}

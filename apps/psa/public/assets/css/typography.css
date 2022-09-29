@@ -1,0 +1,5 @@
+@font-face {
+    font-family: 'Barlow-Regular';
+    src: url('/assets/fonts/barlow-regular.otf') format('opentype');
+    font-display: swap;
+}

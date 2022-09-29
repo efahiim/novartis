@@ -1,0 +1,8 @@
+fragment HintBoxFragment on HintBox {
+  hintBoxText: text
+  image {
+    url
+    title
+    description
+  }
+}
